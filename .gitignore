@@ -1,0 +1,6 @@
+dist/
+build/
+nbproject/
+target/
+nb*.xml
+*.cmd

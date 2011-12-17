@@ -1,0 +1,14 @@
+name: {NAME}
+version: "${project.version}"
+main: {GROUPID}.{NAME}.{NAME}
+#commands:
+depend: []
+softdepend: []
+database: false
+website: "{URL}"
+description: ""
+author: "{AUTHOR}"
+authors:
+  - "{AUTHOR}"
+load: postworld
+#permissions:
