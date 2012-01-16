@@ -38,9 +38,9 @@ public class ProjectGenerator
                 this.readResource(cLoader.getResourceAsStream("resources/bukkit/config.yml")));
         this.resources.put("src:main:resources:plugin.yml",
                 this.readResource(cLoader.getResourceAsStream("resources/bukkit/plugin.yml")));
-        this.resources.put("src:main:java:{GROUPID}:{NAME}:{NAME}.java",
-                this.readResource(cLoader.getResourceAsStream("resources/bukkit/configclass.txt")));
         this.resources.put("src:main:java:{GROUPID}:{NAME}:{NAME}Configuration.java",
+                this.readResource(cLoader.getResourceAsStream("resources/bukkit/configclass.txt")));
+        this.resources.put("src:main:java:{GROUPID}:{NAME}:{NAME}.java",
                 this.readResource(cLoader.getResourceAsStream("resources/bukkit/mainclass.txt")));
         this.resources.put("pom.xml",
                 this.readResource(cLoader.getResourceAsStream("resources/bukkit/pom.xml")));

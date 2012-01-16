@@ -9,13 +9,6 @@
     <packaging>jar</packaging>
     <description>{DESCRIPTION}</description>
 
-    <scm>
-        <!-- CHANGE ME -->
-        <connection>scm:git:git://github.com/quickwango/{NAME}.git</connection>
-        <url>https://github.com/quickwango/{NAME}</url>
-        <developerConnection>scm:git:git@github.com:quickwango/{NAME}.git</developerConnection>
-    </scm>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -23,7 +16,7 @@
     <repositories>
         <repository>
             <id>bukkit-repo</id>
-            <url>http://repo.bukkit.org/artifactory/repo</url>
+            <url>http://repo.bukkit.org/content/groups/repo</url>
         </repository>
     </repositories>
 
