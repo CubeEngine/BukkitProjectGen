@@ -10,7 +10,7 @@ import org.bukkit.Server;
 
 public class {NAME} extends JavaPlugin
 {
-    protected static final Logger log = Logger.getLogger("Minecraft");
+    protected static Logger logger = null;
     public static boolean debugMode = false;
     
     protected Server server;
@@ -24,6 +24,7 @@ public class {NAME} extends JavaPlugin
 
     public void onEnable()
     {
+        logger = this.getLogger();
         this.server = this.getServer();
         this.pm = this.server.getPluginManager();
         this.dataFolder = this.getDataFolder();
@@ -47,17 +48,17 @@ public class {NAME} extends JavaPlugin
 
     public static void log(String msg)
     {
-        log.log(Level.INFO, "[{NAME}] " + msg);
+        logger.log(Level.INFO, msg);
     }
 
     public static void error(String msg)
     {
-        log.log(Level.SEVERE, "[{NAME}] " + msg);
+        logger.log(Level.SEVERE, msg);
     }
 
     public static void error(String msg, Throwable t)
     {
-        log.log(Level.SEVERE, "[{NAME}] " + msg, t);
+        logger.log(Level.SEVERE, msg, t);
     }
 
     public static void debug(String msg)
