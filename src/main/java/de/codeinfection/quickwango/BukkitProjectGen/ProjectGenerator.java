@@ -1,5 +1,6 @@
 package de.codeinfection.quickwango.BukkitProjectGen;
 
+import static de.codeinfection.quickwango.BukkitProjectGen.BukkitProjectGen.echo;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -9,7 +10,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
-import static de.codeinfection.quickwango.BukkitProjectGen.BukkitProjectGen.echo;
 
 /**
  *
@@ -39,9 +39,9 @@ public class ProjectGenerator
         this.resources.put("src:main:resources:plugin.yml",
                 this.readResource(cLoader.getResourceAsStream("resources/bukkit/plugin.yml")));
         this.resources.put("src:main:java:{GROUPID}:{NAME}:{NAME}Configuration.java",
-                this.readResource(cLoader.getResourceAsStream("resources/bukkit/configclass.txt")));
+                this.readResource(cLoader.getResourceAsStream("resources/bukkit/configclass.java")));
         this.resources.put("src:main:java:{GROUPID}:{NAME}:{NAME}.java",
-                this.readResource(cLoader.getResourceAsStream("resources/bukkit/mainclass.txt")));
+                this.readResource(cLoader.getResourceAsStream("resources/bukkit/mainclass.java")));
         this.resources.put("pom.xml",
                 this.readResource(cLoader.getResourceAsStream("resources/bukkit/pom.xml")));
     }
@@ -50,7 +50,7 @@ public class ProjectGenerator
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(in));
         StringBuilder sb = new StringBuilder();
-        String line = null;
+        String line;
         while((line = reader.readLine()) != null)
         {
             sb.append(line).append("\n");
@@ -89,7 +89,7 @@ public class ProjectGenerator
         {
             baseDir.mkdirs();
 
-            BufferedWriter writer = null;
+            BufferedWriter writer;
             for (Map.Entry<String, String> entry : this.resources.entrySet())
             {
                 String path = entry.getKey();

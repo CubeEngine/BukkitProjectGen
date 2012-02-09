@@ -34,7 +34,7 @@ public class {NAME} extends JavaPlugin
         Configuration configuration = this.getConfig();
         configuration.options().copyDefaults(true);
         debugMode = configuration.getBoolean("debug");
-        this.config = new {Name}Configuration(configuration);
+        this.config = new {NAME}Configuration(configuration);
         
         this.saveConfig();
 

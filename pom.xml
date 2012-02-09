@@ -3,7 +3,7 @@
 
     <groupId>de.codeinfection.quickwango</groupId>
     <artifactId>BukkitProjectGen</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>BukkitProjectGen</name>
@@ -34,8 +34,8 @@
                     <include>config.yml</include>
                     <include>plugin.yml</include>
                     <include>pom.xml</include>
-                    <include>mainclass.txt</include>
-                    <include>configclass.txt</include>
+                    <include>mainclass.java</include>
+                    <include>configclass.java</include>
                 </includes>
             </resource>
             <resource>

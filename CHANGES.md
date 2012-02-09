@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+Version 1.0.2
+-------------
+- fixed a placeholder in the mainclass
+- renamed the configclass and mainclass templates
+- minor code cleanup
+
 Version 1.0.1
 -------------
 - fixed class filenames
